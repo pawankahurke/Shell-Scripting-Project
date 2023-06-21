@@ -13,7 +13,7 @@ aws_region="ap-south-1"
 bucket_name="pawan-s3-event"
 lambda_func_name="s3-lambda-function"
 role_name="s3-lambda-sns"
-email_address="hackerboypk@gmail.com"
+email_address="pawankahurke@outlook.com"
 
 # Create IAM Role for the project
 role_response=$(aws iam create-role --role-name s3-lambda-sns --assume-role-policy-document '{
