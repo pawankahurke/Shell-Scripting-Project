@@ -42,7 +42,7 @@ aws iam attach-role-policy --role-name $role_name --policy-arn arn:aws:iam::aws:
 aws iam attach-role-policy --role-name $role_name --policy-arn arn:aws:iam::aws:policy/AmazonSNSFullAccess
 
 # Create the S3 bucket and capture the output in a variable
-bucket_output=$(aws s3api create-bucket --bucket "$bucket_name" --region "$aws_region" LocationConstraint= ap-south-1)
+bucket_output=$(aws s3api create-bucket --bucket "$bucket_name" --region "$aws_region" --create-bucket-configuration LocationConstraint=ap-south-1)
 
 # Print the output from the variable
 echo "Bucket creation output: $bucket_output"
